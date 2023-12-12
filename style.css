@@ -1,0 +1,156 @@
+:root {
+    --orange: #FC7614;
+    --light-grey: hsl(217, 12%, 63%);
+    --med-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --vdark-blue: hsl(216, 12%, 8%);
+    --gradient: radial-gradient(var(--vdark-blue), var(--dark-blue));
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--vdark-blue);
+}
+
+.card {
+    background: var(--gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*   width:50%; */
+    max-width: 40rem;
+    min-height: 60vh;
+    box-sizing: border-box;
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+}
+
+.star-icon {
+    background-color: var(--dark-blue);
+    padding: 1rem;
+    border-radius: 100%;
+    max-width: 2rem;
+}
+
+.card p {
+    color: var(--light-grey);
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    display: block;
+    border: none;
+    background-color: var(--orange);
+    color: white;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 3rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.rating-inputs input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
+
+.rating-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-inputs label {
+    color: var(--light-grey);
+    background-color: var(--dark-blue);
+    border-radius: 100%;
+    display: flex;
+    height: 70px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+label:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+label:focus {
+    background-color: var(--med-grey);
+    color: white;
+}
+
+.thank-you p {
+    text-align: center;
+}
+
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-show {
+    background-color: var(--dark-blue);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    color: var(--orange);
+}
+
+.rating-inputs input[type="radio"]:focus+label {
+    color: white;
+    background-color: var(--light-grey);
+}
+
+.rating-inputs input[type="radio"]:checked+label {
+    color: white;
+    background-color: var(--light-grey);
+}
+
+
+/* From front-end-mentor */
+footer {
+    display: absolute;
+    bottom: 0;
+    padding: 3rem;
+    color: white;
+}
+
+footer a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
